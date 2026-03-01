@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SafetyGuard Test Environment</title>
+</head>
+<body style="padding: 50px; font-family: sans-serif;">
+    <h1>Chat Simulation</h1>
+    <div id="chat-box" style="border: 1px solid #ccc; height: 200px; padding: 10px; margin-bottom: 20px;">
+        <p><strong>Stranger:</strong> Hey there!</p>
+    </div>
+    <input type="text" id="userInput" placeholder="Type a message...">
+    <button onclick="sendMessage()">Send</button>
+
+    <script>
+        function sendMessage() {
+            const input = document.getElementById('userInput');
+            const chat = document.getElementById('chat-box');
+            const p = document.createElement('p');
+            p.innerHTML = `<strong>Me:</strong> ${input.value}`;
+            chat.appendChild(p);
+            input.value = '';
+        }
+    </script>
+</body>
+</html>
